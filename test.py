@@ -28,7 +28,7 @@ while True:
         time.sleep(2)
 
     # If we could not connect within time limit
-    if i == 30:
+    if i == 3:
         print "Could not connect to %s. Giving up" % host
         sys.exit(1)
 
