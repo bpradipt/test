@@ -11,7 +11,7 @@ i = 1
 # Retry a few times if it fails.
 #
 while True:
-    print "Trying to connect to %s (%i/30)" % (host, i)
+    print "Trying to connect to %s (%i/3)" % (host, i)
 
     try:
         ssh = paramiko.SSHClient()
