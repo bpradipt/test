@@ -2,6 +2,10 @@ import sys
 import time
 import select
 import paramiko
+import logging
+ 
+ 
+logging.basicConfig(level=logging.DEBUG)
  
 host = 'cap-sg-prd-3.integration.ibmcloud.com'
 i = 1
