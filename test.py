@@ -37,7 +37,7 @@ while True:
         sys.exit(1)
 
 # Send the command (non-blocking)
-stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release")
+stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release && uname -a")
 
 # Wait for the command to terminate
 while not stdout.channel.exit_status_ready():
