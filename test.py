@@ -20,7 +20,7 @@ while True:
     try:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(host, port=15712, username='test', password='llm123')
+        ssh.connect(host, port=15383, username='test', password='llm123')
         print "Connected to %s" % host
         break
     except paramiko.AuthenticationException:
@@ -37,7 +37,7 @@ while True:
         sys.exit(1)
 
 # Send the command (non-blocking)
-stdin, stdout, stderr = ssh.exec_command("ls -ltr ~/")
+stdin, stdout, stderr = ssh.exec_command("cat /etc/os-release")
 
 # Wait for the command to terminate
 while not stdout.channel.exit_status_ready():
